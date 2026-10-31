@@ -1,4 +1,4 @@
-# DM DB driver for Laravel 4|5|6|7|8|9 via DM8
+# DM DB driver for Laravel 6|7|8|9 via DM8
 
 ## Laravel-DM8
 
@@ -6,38 +6,31 @@ Laravel-DM8 is an Dm Database Driver package for [Laravel](http://laravel.com/).
 
 ## Documentations
 
-- You will find user-friendly and updated documentation here: [Laravel-DM8 Docs](https://github.com/jackfinal/laravel-DM8)
+- You will find user-friendly and updated documentation here: [Laravel-DM8 Docs](https://github.com/fising/laravel-dm8)
 - All about dm and php:[The Underground PHP and Dm Manual](https://eco.dameng.com/document/dm/zh-cn/app-dev/php-php.html)
 
 ## Laravel Version Compatibility
 
- Laravel  | Package
-:---------|:----------
- 5.1.x    | 5.1.x
- 5.2.x    | 5.2.x
- 5.3.x    | 5.3.x
- 5.4.x    | 5.4.x
- 5.5.x    | 5.5.x
- 5.6.x    | 5.6.x
- 5.7.x    | 5.7.x
- 5.8.x    | 5.8.x
- 6.x.x    | 6.x.x
- 7.x.x    | 7.x.x
- 8.x.x    | 8.x.x
- 9.x.x    | 9.x.x
+ Laravel | PHP
+:--------|:-------
+ 6.x     | ^8.0
+ 7.x     | ^8.0
+ 8.x     | ^8.0
+ 9.x     | ^8.0.2
 
 ## Quick Installation
 
 ```bash
-composer require jackfinal/laravel-dm8
+composer require fising/laravel-dm8
 ```
 
-## Service Provider (Optional on Laravel 5.5+)
+## Service Provider
 
-Once Composer has installed or updated your packages you need to register Laravel-DM8. Open up `config/app.php` and find the providers key and add:
+Laravel 6–9 discovers both providers automatically. Register them in `config/app.php` only when package discovery is disabled:
 
 ```php
-LaravelDm8\\Dm8\\Dm8ServiceProvider::class,
+LaravelDm8\Dm8\Dm8ServiceProvider::class,
+LaravelDm8\Dm8\Dm8ValidationServiceProvider::class,
 ```
 
 ## Configuration (OPTIONAL)
@@ -68,5 +61,3 @@ Then run your laravel installation...
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[link-author]: https://github.com/jackfinal
